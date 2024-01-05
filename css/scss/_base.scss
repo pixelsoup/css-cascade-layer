@@ -1,0 +1,47 @@
+// https://codepen.io/pixelsoup/pen/wvOMEMd?editors=1100
+// https://css-tricks.com/css-cascade-layers/
+
+// @layer
+// 1. defaults
+// 2. components
+// 3. utilities
+
+@layer defaults, components, utilities;
+
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/webfonts/Roboto-Regular.woff2") format("woff2");
+}
+
+:root {
+  --white: #fff;
+  --blue: #428fbd;
+  --red: #ff5722;
+  --purple: #734f79;
+  --black5: #f2f2f2;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", serif;
+  display: grid;
+  min-height: 100%;
+  place-content: center;
+  padding: 1em;
+}
+
+.container {
+  max-width: 700px;
+  margin-inline: auto;
+}
